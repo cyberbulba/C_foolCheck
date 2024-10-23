@@ -1,0 +1,35 @@
+#define N 20
+#define Left 0
+#include <stdio.h>
+
+int foolCheck()
+{
+ int num, x;
+ char buf;
+ printf("Vvedite tseloe chislo от %d до %d:\n", Left, N);
+ while (1)
+ {
+  x = scanf("%d", &num);
+  if(x)
+  {
+   if(num <= N && num > Left)
+   {
+       printf("Chislo prinyato.");
+       return num;
+   }
+  }
+  else
+  {
+   scanf("%s", &buf);
+  }
+ printf("Ne tseloe chislo.\n");
+ }
+}
+
+int main() {
+    int a;
+    a=foolCheck();
+    printf("%d", a);
+
+    return 0;
+}
